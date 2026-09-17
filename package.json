@@ -1,0 +1,44 @@
+{
+  "name": "skill-tree",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A private skill library, visual skill tree, and Jev-guided MCP server.",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "dev": "node server/index.mjs --dev",
+    "build": "tsc -b && vite build",
+    "start": "node server/index.mjs",
+    "mcp": "node server/mcp-stdio.mjs",
+    "import": "node scripts/import-skills.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check:public": "node scripts/check-public.mjs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "@fontsource-variable/dm-sans": "^5.2.0",
+    "@fontsource/barlow-condensed": "^5.3.0",
+    "@modelcontextprotocol/sdk": "^1.27.0",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "lucide-react": "^0.468.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
+    "semver": "^7.8.5",
+    "yaml": "^2.8.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@vitejs/plugin-react": "^4.7.0",
+    "prettier": "3.6.2",
+    "typescript": "^5.9.0",
+    "vite": "^6.3.0"
+  }
+}

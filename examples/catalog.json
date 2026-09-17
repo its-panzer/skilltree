@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "importedAt": null,
+  "importSummary": {
+    "skills": 3,
+    "files": 0,
+    "duplicates": 0,
+    "sources": ["Example library"],
+    "notes": ["These fictional skills demonstrate the framework."]
+  },
+  "skills": [
+    {
+      "id": "clear-writing",
+      "name": "clear-writing",
+      "title": "Clear writing",
+      "description": "Edit a short article for specific claims, active voice, and clear transitions.",
+      "category": "content",
+      "branch": "Writing",
+      "scope": "personal",
+      "version": "1.0.0",
+      "revision": "example",
+      "files": [],
+      "instructions": "# Clear writing\n\nRead the draft. Identify its audience and central claim. Replace vague language with concrete details. Preserve the author's meaning and explain substantial edits."
+    },
+    {
+      "id": "review-code",
+      "name": "review-code",
+      "title": "Review code",
+      "description": "Review a code change for correctness, failure paths, and meaningful tests.",
+      "category": "review",
+      "branch": "Code quality",
+      "scope": "personal",
+      "version": "1.0.0",
+      "revision": "example",
+      "files": [],
+      "instructions": "# Review code\n\nRead the change and its callers. Identify concrete regressions with reproducible examples. Prioritize findings by impact. State what was checked."
+    },
+    {
+      "id": "research-topic",
+      "name": "research-topic",
+      "title": "Research a topic",
+      "description": "Investigate a question using primary sources, record citations, and distinguish evidence from inference.",
+      "category": "research",
+      "branch": "Investigation",
+      "scope": "personal",
+      "version": "1.0.0",
+      "revision": "example",
+      "files": [],
+      "instructions": "# Research a topic\n\nDefine the question. Find primary evidence. Record sources and dates. Identify uncertainties and summarize only what the evidence supports."
+    }
+  ]
+}

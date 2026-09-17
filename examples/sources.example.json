@@ -1,0 +1,19 @@
+{
+  "sources": ["Your chosen skill directories"],
+  "skills": [
+    {
+      "id": "my-writing-skill",
+      "title": "My writing skill",
+      "root": "/absolute/path/to/my-writing-skill",
+      "entryFile": "SKILL.md",
+      "category": "content",
+      "branch": "Writing",
+      "scope": "personal",
+      "provenance": { "kind": "authored", "evidence": "Your own skill source" },
+      "candidates": [],
+      "selectionRationale": ["Your canonical source directory."],
+      "supportFiles": [],
+      "warnings": []
+    }
+  ]
+}
