@@ -273,9 +273,14 @@ export default function App() {
           </span>
         </button>
         <div className="workspace-label">
-          <span className="avatar">P</span>
+          <span className="avatar">{catalog.isExample ? "E" : "P"}</span>
           <span>
-            Personal network<small>Work + life · Current skills</small>
+            {catalog.isExample ? "Example network" : "Personal network"}
+            <small>
+              {catalog.isExample
+                ? "Fictional skills · Explore freely"
+                : "Work + life · Current skills"}
+            </small>
           </span>
         </div>
         <nav aria-label="Main navigation">
@@ -336,7 +341,9 @@ export default function App() {
           </p>
           <div>
             <Lock size={12} />
-            Private collection
+            {catalog.isExample
+              ? "Fictional example collection"
+              : "Private collection"}
           </div>
         </div>
       </aside>

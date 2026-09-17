@@ -7,8 +7,9 @@ export const root = path.resolve(
   path.dirname(fileURLToPath(import.meta.url)),
   "..",
 );
-dotenv.config({ path: path.join(root, ".env"), quiet: true });
-if (!process.env.TYPESAFE_API_KEY && process.env.TYPESAFE_ENV_FILE) {
+const demo = process.env.SKILL_TREE_DEMO === "1";
+if (!demo) dotenv.config({ path: path.join(root, ".env"), quiet: true });
+if (!demo && !process.env.TYPESAFE_API_KEY && process.env.TYPESAFE_ENV_FILE) {
   try {
     process.env.TYPESAFE_API_KEY =
       dotenv.parse(fs.readFileSync(process.env.TYPESAFE_ENV_FILE))
@@ -19,14 +20,15 @@ if (!process.env.TYPESAFE_API_KEY && process.env.TYPESAFE_ENV_FILE) {
 }
 export const config = {
   root,
+  demo,
   port: Number(process.env.PORT || 4783),
-  host: process.env.HOST || "127.0.0.1",
+  host: demo ? "127.0.0.1" : process.env.HOST || "127.0.0.1",
   dataDir: path.resolve(
     process.env.SKILL_TREE_DATA_DIR || path.join(root, "data/private"),
   ),
-  apiKey: process.env.TYPESAFE_API_KEY || "",
-  token: process.env.SKILL_TREE_TOKEN || "",
+  apiKey: demo ? "" : process.env.TYPESAFE_API_KEY || "",
+  token: demo ? "" : process.env.SKILL_TREE_TOKEN || "",
   model: process.env.JEV_MODEL || "jev-latest",
-  publicOrigin: process.env.SKILL_TREE_PUBLIC_ORIGIN || "",
-  tailscaleLogin: process.env.TAILSCALE_ALLOWED_LOGIN || "",
+  publicOrigin: demo ? "" : process.env.SKILL_TREE_PUBLIC_ORIGIN || "",
+  tailscaleLogin: demo ? "" : process.env.TAILSCALE_ALLOWED_LOGIN || "",
 };

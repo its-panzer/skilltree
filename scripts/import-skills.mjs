@@ -14,7 +14,11 @@ export function frontmatter(text) {
   const m = text.match(/^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/);
   if (!m) return {};
   try {
-    return parse(m[1]) || {};
+    const metadata = parse(m[1]) || {};
+    return {
+      ...metadata,
+      version: metadata.version ?? metadata.metadata?.version,
+    };
   } catch {
     // Preserve instructions byte-for-byte even when source frontmatter contains an unquoted colon.
     const result = {

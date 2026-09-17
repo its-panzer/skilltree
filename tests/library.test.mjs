@@ -145,6 +145,12 @@ test("bundle file access rejects traversal and symlinks outside the bundle", () 
 });
 test("version comparison is numeric and imperfect frontmatter retains known metadata", () => {
   assert.ok(compareVersions("1.10.0", "1.9.0") > 0);
+  assert.equal(
+    frontmatter(
+      "---\nname: example\nmetadata:\n  version: 2.0.0\n---\n# Example",
+    ).version,
+    "2.0.0",
+  );
   const m = frontmatter(
     "---\nname: launch\nversion: 1.0.0\ndescription: Write a post: review it\n---\n# Original",
   );

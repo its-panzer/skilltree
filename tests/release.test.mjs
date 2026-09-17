@@ -60,3 +60,21 @@ test("release checks accept a clean framework commit", (t) => {
   commit();
   assert.deepEqual(checkPublic({ cwd }).failures, []);
 });
+
+test("reviewed preview media is accepted only while its bytes match the reviewed hash", (t) => {
+  const { cwd, commit } = repository(t);
+  const file = "docs/skilltree-preview.png";
+  fs.mkdirSync(path.join(cwd, "docs"));
+  const bytes = fs.readFileSync(new URL(`../${file}`, import.meta.url));
+  fs.writeFileSync(path.join(cwd, file), bytes);
+  commit();
+  assert.equal(checkPublic({ cwd }).failures.length, 0);
+  const changed = Buffer.from(bytes);
+  changed[changed.length - 1] ^= 1;
+  fs.writeFileSync(path.join(cwd, file), changed);
+  assert.ok(
+    checkPublic({ cwd }).failures.some((failure) =>
+      failure.includes("binary file requires manual review"),
+    ),
+  );
+});

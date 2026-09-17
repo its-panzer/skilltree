@@ -1,10 +1,38 @@
 # Skilltree
 
-A website and MCP server for your personal skill library. Browse a visual tree, ask Jev to find the right skill, and hand its current instructions to an agent.
+Your skills, connected. Skilltree is a local-first website and MCP server that turns a collection of agent instructions into a navigable skill tree. Browse the library, ask Jev to choose a path, and hand the current instructions to an agent.
+
+![Skilltree interface mockup with 24 fictional example skills](docs/skilltree-preview.png)
+
+_Illustrative interface mockup. All skills shown are fictional examples included in this repository. [Image generation prompt](docs/preview-prompt.md)._
 
 Skilltree groups capabilities into core skills, branches, and specialized skills. These edges express subject relationships, not mandatory execution order. TypeSafe Jev makes a separate typed choice at each level. Every decision is visible in the activity screen, with probabilities and the selected path.
 
-## Run locally
+## Try the example library
+
+Requires Node.js 22.13 or newer.
+
+```sh
+git clone https://github.com/its-panzer/skilltree.git
+cd skilltree
+npm ci
+npm run demo
+```
+
+Open `http://127.0.0.1:4784`. Explore **24 original example skills**, read their source files, filter work and personal scopes, and inspect activity. Demo mode uses temporary activity storage, ignores private catalogs and credentials, and binds to localhost. Jev routing is unavailable in this mode; it shows labeled local suggestions instead of inventing a decision. Stop with Ctrl-C.
+
+| Core skill | Included examples                                                   |
+| ---------- | ------------------------------------------------------------------- |
+| Content    | Clear writing, Release brief, Story outline, Social caption         |
+| Build      | Typed endpoint, Form validation, Accessible component, Test fixture |
+| Review     | Review code, Accessibility review, Dependency check, Privacy check  |
+| Research   | Research a topic, Compare options, Interview plan, Evidence map     |
+| Operate    | Meeting to actions, Weekly plan, Incident review, Release checklist |
+| Life       | Meal plan, Packing list, Home project, Learning sprint              |
+
+Each example is a self-contained, MIT-licensed [SKILL.md](examples/skills) with a focused description and usable instructions. They were written for this framework and contain no personal collection content. Edit the Markdown sources, then run `npm run examples:build` to refresh the catalog.
+
+## Run your own library
 
 Requires Node.js 22.13 or newer. ZIP imports also require Python 3.9 or newer.
 
@@ -14,7 +42,7 @@ cp .env.example .env
 npm run dev
 ```
 
-Open `http://127.0.0.1:4783`. A fresh checkout uses three clearly labeled example skills. The server, website, and MCP endpoint share one port.
+Open `http://127.0.0.1:4783`. A fresh checkout starts with the 24 example skills until you import a private library. The server, website, and MCP endpoint share one port.
 
 For a persistent production server:
 
@@ -79,9 +107,9 @@ Devices running the MCP client must join the same tailnet. A cloud-hosted agent 
 
 ## Framework and private collection
 
-The Git repository contains the framework and fictional examples. Your catalog, copied bundles, absolute source paths, activity database, connection settings, and `.env` are ignored. The private collection may contain work material and adapted upstream skills; their licenses and attribution are independent of the framework. Open sourcing the framework later does not authorize publishing that collection.
+The Git repository contains the framework and fictional examples. Your catalog, copied bundles, absolute source paths, activity database, connection settings, and `.env` are ignored. Imported collections may contain work material and adapted upstream skills; their licenses and attribution are independent of this framework. The public repository includes only the framework and its original examples.
 
-Before sharing a source archive, run `npm run check:public` and inspect the tracked file list and history. The check scans tracked files and every commit reachable from HEAD for runtime paths and common secret patterns. It does not identify every possible private skill or sensitive passage; review the actual release against your private catalog too. Export with `git archive`, which excludes ignored files. This repository is private for now; no open-source license has been selected.
+Before sharing a source archive, run `npm run check:public` and inspect the tracked file list and history. The check scans tracked files and every commit reachable from HEAD for runtime paths and common secret patterns. It does not identify every possible private skill or sensitive passage; review the actual release against your private catalog too. Export with `git archive`, which excludes ignored files. Binary preview media is allowed only when its exact hash appears in `docs/reviewed-media.json`; review the image itself and its metadata before updating that manifest.
 
 ## Checks
 
@@ -93,3 +121,9 @@ npm run check:public
 ```
 
 Tests cover hierarchical routing, confidence gates, provider failure, scope filtering, byte-preserving import, import rollback, bundle path boundaries, persistent activity, HTTP access boundaries, and MCP protocol round trips. Live Jev accuracy still depends on the query and taxonomy; no benchmark accuracy is claimed.
+
+## License and contributions
+
+The framework and original examples are available under the [MIT License](LICENSE). Third-party dependencies retain their own licenses.
+
+Contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for development, example-library, and release checks. Never include private skill collections or credentials in issues, screenshots, fixtures, or pull requests.

@@ -11,14 +11,13 @@ export class Library {
     fs.mkdirSync(dataDir, { recursive: true, mode: 0o700 });
     this.catalogPath = path.join(dataDir, "catalog.json");
     const example = path.join(config.root, "examples/catalog.json");
+    this.isExample = config.demo || !fs.existsSync(this.catalogPath);
     this.catalog = JSON.parse(
-      fs.readFileSync(
-        fs.existsSync(this.catalogPath) ? this.catalogPath : example,
-        "utf8",
-      ),
+      fs.readFileSync(this.isExample ? example : this.catalogPath, "utf8"),
     );
-    this.isExample = !fs.existsSync(this.catalogPath);
-    this.db = new DatabaseSync(path.join(dataDir, "activity.sqlite"));
+    this.db = new DatabaseSync(
+      config.demo ? ":memory:" : path.join(dataDir, "activity.sqlite"),
+    );
     this.db.exec(`PRAGMA journal_mode=WAL; PRAGMA busy_timeout=5000;
       CREATE TABLE IF NOT EXISTS activity (id TEXT PRIMARY KEY, at TEXT NOT NULL, type TEXT NOT NULL, title TEXT NOT NULL, detail TEXT NOT NULL, actor TEXT NOT NULL, skill_id TEXT, data TEXT NOT NULL);
       CREATE INDEX IF NOT EXISTS activity_at ON activity(at DESC);`);
@@ -64,9 +63,7 @@ export class Library {
       throw Object.assign(new Error("Skill not found"), { status: 404 });
     return {
       ...skill,
-      instructions: this.isExample
-        ? skill.instructions
-        : this.file(id, skill.entryFile || "SKILL.md").content,
+      instructions: this.file(id, skill.entryFile || "SKILL.md").content,
     };
   }
   file(id, filePath) {
@@ -78,7 +75,9 @@ export class Library {
       throw Object.assign(new Error("File not found in this skill bundle"), {
         status: 404,
       });
-    const bundle = path.join(this.dataDir, "bundles", id);
+    const bundle = this.isExample
+      ? path.join(config.root, "examples/skills", id)
+      : path.join(this.dataDir, "bundles", id);
     const resolved = fs.realpathSync(path.join(bundle, filePath));
     if (!resolved.startsWith(fs.realpathSync(bundle) + path.sep))
       throw Object.assign(new Error("File is outside this skill bundle"), {

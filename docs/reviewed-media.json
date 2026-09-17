@@ -1,0 +1,7 @@
+{
+  "docs/skilltree-preview.png": {
+    "sha256": "2db8de4a22c30d541f2bbb7fe095f17f733afdaf67ef4d24ce26528b7c14bfc3",
+    "description": "Original interface mockup showing only fictional example skills. Visually reviewed before publication.",
+    "prompt": "docs/preview-prompt.md"
+  }
+}

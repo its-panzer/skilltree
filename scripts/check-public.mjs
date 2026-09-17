@@ -2,6 +2,15 @@ import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { execFileSync } from "node:child_process";
+import { createHash } from "node:crypto";
+
+// Media must be reviewed explicitly; the exact hash prevents unreviewed replacements.
+const reviewedMedia = JSON.parse(
+  fs.readFileSync(
+    new URL("../docs/reviewed-media.json", import.meta.url),
+    "utf8",
+  ),
+);
 
 const patterns = [
   [/\/Users\/[^/\s]+\//, "personal absolute path"],
@@ -22,8 +31,12 @@ function inspect(file, bytes, label) {
     return [`${label}: runtime data or credential file`];
   if (bytes.length > 5_000_000)
     return [`${label}: large file requires manual review`];
-  if (bytes.subarray(0, 8192).includes(0))
-    return [`${label}: binary file requires manual review`];
+  if (bytes.subarray(0, 8192).includes(0)) {
+    const digest = createHash("sha256").update(bytes).digest("hex");
+    return reviewedMedia[file]?.sha256 === digest
+      ? []
+      : [`${label}: binary file requires manual review`];
+  }
   const text = bytes.toString("utf8");
   return patterns
     .filter(([pattern]) => pattern.test(text))

@@ -116,6 +116,7 @@ export async function createApp({ library = new Library(), dev = false } = {}) {
           "skill-tree": {
             command: process.execPath,
             args: [path.join(config.root, "server/mcp-stdio.mjs")],
+            ...(config.demo ? { env: { SKILL_TREE_DEMO: "1" } } : {}),
           },
         },
       },

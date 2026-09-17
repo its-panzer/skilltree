@@ -2,51 +2,734 @@
   "schemaVersion": 1,
   "importedAt": null,
   "importSummary": {
-    "skills": 3,
-    "files": 0,
+    "skills": 24,
+    "files": 24,
     "duplicates": 0,
-    "sources": ["Example library"],
-    "notes": ["These fictional skills demonstrate the framework."]
+    "sources": ["Original fictional examples"],
+    "notes": [
+      "These examples demonstrate the framework and contain no personal collection content."
+    ]
   },
   "skills": [
+    {
+      "id": "accessible-component",
+      "name": "accessible-component",
+      "title": "Accessible component",
+      "description": "Build a reusable interface component with semantic controls, keyboard behavior, and explicit interaction states.",
+      "category": "build",
+      "branch": "Interface systems",
+      "scope": "work",
+      "version": "1.0.0",
+      "revision": "ecc9f5680706",
+      "sha256": "ecc9f56807060233bf16346ad176d89f3a8f42d35e955bd3818158c1f391e07f",
+      "entryFile": "SKILL.md",
+      "sourcePath": "examples/skills/accessible-component/SKILL.md",
+      "sourceType": "example",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "bytes": 1025,
+          "sha256": "ecc9f56807060233bf16346ad176d89f3a8f42d35e955bd3818158c1f391e07f",
+          "mode": "644"
+        }
+      ],
+      "provenance": {
+        "kind": "fictional-example",
+        "evidence": "Original example written for Skilltree; MIT licensed."
+      },
+      "selectionRationale": [
+        "Bundled framework example. Import your own library to replace it."
+      ]
+    },
     {
       "id": "clear-writing",
       "name": "clear-writing",
       "title": "Clear writing",
-      "description": "Edit a short article for specific claims, active voice, and clear transitions.",
+      "description": "Edit a supplied draft for concrete claims, clear transitions, and the intended audience.",
       "category": "content",
       "branch": "Writing",
-      "scope": "personal",
+      "scope": "work",
       "version": "1.0.0",
-      "revision": "example",
-      "files": [],
-      "instructions": "# Clear writing\n\nRead the draft. Identify its audience and central claim. Replace vague language with concrete details. Preserve the author's meaning and explain substantial edits."
+      "revision": "5931225d8a45",
+      "sha256": "5931225d8a452f5a8a9df38c60c0530242bf9745d40768b93e2cc7783436b03d",
+      "entryFile": "SKILL.md",
+      "sourcePath": "examples/skills/clear-writing/SKILL.md",
+      "sourceType": "example",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "bytes": 1048,
+          "sha256": "5931225d8a452f5a8a9df38c60c0530242bf9745d40768b93e2cc7783436b03d",
+          "mode": "644"
+        }
+      ],
+      "provenance": {
+        "kind": "fictional-example",
+        "evidence": "Original example written for Skilltree; MIT licensed."
+      },
+      "selectionRationale": [
+        "Bundled framework example. Import your own library to replace it."
+      ]
     },
     {
-      "id": "review-code",
-      "name": "review-code",
-      "title": "Review code",
-      "description": "Review a code change for correctness, failure paths, and meaningful tests.",
+      "id": "compare-options",
+      "name": "compare-options",
+      "title": "Compare options",
+      "description": "Compare a small set of options against stated constraints, separating verified facts from estimates and preferences.",
+      "category": "research",
+      "branch": "Decision support",
+      "scope": "work",
+      "version": "1.0.0",
+      "revision": "928825d04cd3",
+      "sha256": "928825d04cd3fad2d390f7e3cfd0dc625fd7ff13d2e50fae8bda39a913e4ac0f",
+      "entryFile": "SKILL.md",
+      "sourcePath": "examples/skills/compare-options/SKILL.md",
+      "sourceType": "example",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "bytes": 1048,
+          "sha256": "928825d04cd3fad2d390f7e3cfd0dc625fd7ff13d2e50fae8bda39a913e4ac0f",
+          "mode": "644"
+        }
+      ],
+      "provenance": {
+        "kind": "fictional-example",
+        "evidence": "Original example written for Skilltree; MIT licensed."
+      },
+      "selectionRationale": [
+        "Bundled framework example. Import your own library to replace it."
+      ]
+    },
+    {
+      "id": "dependency-check",
+      "name": "dependency-check",
+      "title": "Dependency check",
+      "description": "Review a dependency update for compatibility, configuration changes, and security advisories relevant to the project.",
       "category": "review",
       "branch": "Code quality",
+      "scope": "work",
+      "version": "1.0.0",
+      "revision": "9f81141805d7",
+      "sha256": "9f81141805d741a43fd02e82ed3da9937ff123d1cbafab7b890fbc76671689c5",
+      "entryFile": "SKILL.md",
+      "sourcePath": "examples/skills/dependency-check/SKILL.md",
+      "sourceType": "example",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "bytes": 980,
+          "sha256": "9f81141805d741a43fd02e82ed3da9937ff123d1cbafab7b890fbc76671689c5",
+          "mode": "644"
+        }
+      ],
+      "provenance": {
+        "kind": "fictional-example",
+        "evidence": "Original example written for Skilltree; MIT licensed."
+      },
+      "selectionRationale": [
+        "Bundled framework example. Import your own library to replace it."
+      ]
+    },
+    {
+      "id": "evidence-map",
+      "name": "evidence-map",
+      "title": "Evidence map",
+      "description": "Map a set of claims to supplied sources, showing missing support, contradictions, and the strength of each connection.",
+      "category": "research",
+      "branch": "Decision support",
+      "scope": "work",
+      "version": "1.0.0",
+      "revision": "0eeac5013137",
+      "sha256": "0eeac50131373ec795d72717b50e0baa2b710ce2981404c9d7b13d6a22df6c48",
+      "entryFile": "SKILL.md",
+      "sourcePath": "examples/skills/evidence-map/SKILL.md",
+      "sourceType": "example",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "bytes": 945,
+          "sha256": "0eeac50131373ec795d72717b50e0baa2b710ce2981404c9d7b13d6a22df6c48",
+          "mode": "644"
+        }
+      ],
+      "provenance": {
+        "kind": "fictional-example",
+        "evidence": "Original example written for Skilltree; MIT licensed."
+      },
+      "selectionRationale": [
+        "Bundled framework example. Import your own library to replace it."
+      ]
+    },
+    {
+      "id": "form-validation",
+      "name": "form-validation",
+      "title": "Form validation",
+      "description": "Add usable client and server validation to a form, preserving entered values and actionable field errors.",
+      "category": "build",
+      "branch": "Application code",
+      "scope": "work",
+      "version": "1.0.0",
+      "revision": "f622e1a5fd5f",
+      "sha256": "f622e1a5fd5faaba4af8181da95f772ee1dbebe52b0899e9d7c4f49ea8e90c6a",
+      "entryFile": "SKILL.md",
+      "sourcePath": "examples/skills/form-validation/SKILL.md",
+      "sourceType": "example",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "bytes": 946,
+          "sha256": "f622e1a5fd5faaba4af8181da95f772ee1dbebe52b0899e9d7c4f49ea8e90c6a",
+          "mode": "644"
+        }
+      ],
+      "provenance": {
+        "kind": "fictional-example",
+        "evidence": "Original example written for Skilltree; MIT licensed."
+      },
+      "selectionRationale": [
+        "Bundled framework example. Import your own library to replace it."
+      ]
+    },
+    {
+      "id": "home-project",
+      "name": "home-project",
+      "title": "Home project",
+      "description": "Break a small household project into materials, dependencies, an achievable sequence, and a clear stopping point.",
+      "category": "life",
+      "branch": "Projects & learning",
       "scope": "personal",
       "version": "1.0.0",
-      "revision": "example",
-      "files": [],
-      "instructions": "# Review code\n\nRead the change and its callers. Identify concrete regressions with reproducible examples. Prioritize findings by impact. State what was checked."
+      "revision": "10d1bacd15d5",
+      "sha256": "10d1bacd15d54b1b8ca15ef27e6e32c6e2b819ada3e579870936c411b4a57e13",
+      "entryFile": "SKILL.md",
+      "sourcePath": "examples/skills/home-project/SKILL.md",
+      "sourceType": "example",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "bytes": 982,
+          "sha256": "10d1bacd15d54b1b8ca15ef27e6e32c6e2b819ada3e579870936c411b4a57e13",
+          "mode": "644"
+        }
+      ],
+      "provenance": {
+        "kind": "fictional-example",
+        "evidence": "Original example written for Skilltree; MIT licensed."
+      },
+      "selectionRationale": [
+        "Bundled framework example. Import your own library to replace it."
+      ]
+    },
+    {
+      "id": "incident-retrospective",
+      "name": "incident-retrospective",
+      "title": "Incident review",
+      "description": "Turn an incident timeline into a factual retrospective with contributing conditions and verifiable follow-up actions.",
+      "category": "operate",
+      "branch": "Team coordination",
+      "scope": "work",
+      "version": "1.0.0",
+      "revision": "09abd79a407e",
+      "sha256": "09abd79a407eef6f766bdc7c67b55c289dca2aa91c5e1146fbcc321cf695b139",
+      "entryFile": "SKILL.md",
+      "sourcePath": "examples/skills/incident-retrospective/SKILL.md",
+      "sourceType": "example",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "bytes": 975,
+          "sha256": "09abd79a407eef6f766bdc7c67b55c289dca2aa91c5e1146fbcc321cf695b139",
+          "mode": "644"
+        }
+      ],
+      "provenance": {
+        "kind": "fictional-example",
+        "evidence": "Original example written for Skilltree; MIT licensed."
+      },
+      "selectionRationale": [
+        "Bundled framework example. Import your own library to replace it."
+      ]
+    },
+    {
+      "id": "interface-accessibility",
+      "name": "interface-accessibility",
+      "title": "Accessibility review",
+      "description": "Review a specified interface flow for keyboard access, meaningful labels, focus handling, and recoverable errors.",
+      "category": "review",
+      "branch": "Interface quality",
+      "scope": "work",
+      "version": "1.0.0",
+      "revision": "7bc5b8d1eb30",
+      "sha256": "7bc5b8d1eb30dfdf09ef90427c86b8dfb20d56b06a20c821772ce8bc4a632874",
+      "entryFile": "SKILL.md",
+      "sourcePath": "examples/skills/interface-accessibility/SKILL.md",
+      "sourceType": "example",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "bytes": 1026,
+          "sha256": "7bc5b8d1eb30dfdf09ef90427c86b8dfb20d56b06a20c821772ce8bc4a632874",
+          "mode": "644"
+        }
+      ],
+      "provenance": {
+        "kind": "fictional-example",
+        "evidence": "Original example written for Skilltree; MIT licensed."
+      },
+      "selectionRationale": [
+        "Bundled framework example. Import your own library to replace it."
+      ]
+    },
+    {
+      "id": "interview-plan",
+      "name": "interview-plan",
+      "title": "Interview plan",
+      "description": "Prepare a short research interview that tests a specific product assumption without leading the participant.",
+      "category": "research",
+      "branch": "Investigation",
+      "scope": "work",
+      "version": "1.0.0",
+      "revision": "1e764b20aeba",
+      "sha256": "1e764b20aebaab41f2f394a8650a29932071200838aa7938f4f8d282887fa3cf",
+      "entryFile": "SKILL.md",
+      "sourcePath": "examples/skills/interview-plan/SKILL.md",
+      "sourceType": "example",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "bytes": 981,
+          "sha256": "1e764b20aebaab41f2f394a8650a29932071200838aa7938f4f8d282887fa3cf",
+          "mode": "644"
+        }
+      ],
+      "provenance": {
+        "kind": "fictional-example",
+        "evidence": "Original example written for Skilltree; MIT licensed."
+      },
+      "selectionRationale": [
+        "Bundled framework example. Import your own library to replace it."
+      ]
+    },
+    {
+      "id": "learning-sprint",
+      "name": "learning-sprint",
+      "title": "Learning sprint",
+      "description": "Design a short practice plan around a specific skill, available time, and an observable demonstration of progress.",
+      "category": "life",
+      "branch": "Projects & learning",
+      "scope": "personal",
+      "version": "1.0.0",
+      "revision": "96ecbc8568aa",
+      "sha256": "96ecbc8568aa6ac741bb1c94e8dd172bff7b8356babad692b1f47f0a8a8241c1",
+      "entryFile": "SKILL.md",
+      "sourcePath": "examples/skills/learning-sprint/SKILL.md",
+      "sourceType": "example",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "bytes": 935,
+          "sha256": "96ecbc8568aa6ac741bb1c94e8dd172bff7b8356babad692b1f47f0a8a8241c1",
+          "mode": "644"
+        }
+      ],
+      "provenance": {
+        "kind": "fictional-example",
+        "evidence": "Original example written for Skilltree; MIT licensed."
+      },
+      "selectionRationale": [
+        "Bundled framework example. Import your own library to replace it."
+      ]
+    },
+    {
+      "id": "meal-planning",
+      "name": "meal-planning",
+      "title": "Meal plan",
+      "description": "Plan meals from stated preferences, available ingredients, cooking time, and household size.",
+      "category": "life",
+      "branch": "Everyday planning",
+      "scope": "personal",
+      "version": "1.0.0",
+      "revision": "db015158a427",
+      "sha256": "db015158a4277bfe8959a35636555c52a9049c4782204e76ca12bc86665240a4",
+      "entryFile": "SKILL.md",
+      "sourcePath": "examples/skills/meal-planning/SKILL.md",
+      "sourceType": "example",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "bytes": 914,
+          "sha256": "db015158a4277bfe8959a35636555c52a9049c4782204e76ca12bc86665240a4",
+          "mode": "644"
+        }
+      ],
+      "provenance": {
+        "kind": "fictional-example",
+        "evidence": "Original example written for Skilltree; MIT licensed."
+      },
+      "selectionRationale": [
+        "Bundled framework example. Import your own library to replace it."
+      ]
+    },
+    {
+      "id": "meeting-to-actions",
+      "name": "meeting-to-actions",
+      "title": "Meeting to actions",
+      "description": "Turn supplied meeting notes into decisions, assigned actions, and unresolved questions without inventing commitments.",
+      "category": "operate",
+      "branch": "Team coordination",
+      "scope": "work",
+      "version": "1.0.0",
+      "revision": "03b6cc2c5d74",
+      "sha256": "03b6cc2c5d74f1118339f88a7d18d81c9dd273080616d30154c1b94aef99bf22",
+      "entryFile": "SKILL.md",
+      "sourcePath": "examples/skills/meeting-to-actions/SKILL.md",
+      "sourceType": "example",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "bytes": 951,
+          "sha256": "03b6cc2c5d74f1118339f88a7d18d81c9dd273080616d30154c1b94aef99bf22",
+          "mode": "644"
+        }
+      ],
+      "provenance": {
+        "kind": "fictional-example",
+        "evidence": "Original example written for Skilltree; MIT licensed."
+      },
+      "selectionRationale": [
+        "Bundled framework example. Import your own library to replace it."
+      ]
+    },
+    {
+      "id": "packing-list",
+      "name": "packing-list",
+      "title": "Packing list",
+      "description": "Build a compact packing list for a stated trip, accounting for activities, laundry, luggage, and weather uncertainty.",
+      "category": "life",
+      "branch": "Everyday planning",
+      "scope": "personal",
+      "version": "1.0.0",
+      "revision": "39936045cb2f",
+      "sha256": "39936045cb2fbb9608eb9e65540a7285994006203e3d4c2b800ee62aab16242f",
+      "entryFile": "SKILL.md",
+      "sourcePath": "examples/skills/packing-list/SKILL.md",
+      "sourceType": "example",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "bytes": 925,
+          "sha256": "39936045cb2fbb9608eb9e65540a7285994006203e3d4c2b800ee62aab16242f",
+          "mode": "644"
+        }
+      ],
+      "provenance": {
+        "kind": "fictional-example",
+        "evidence": "Original example written for Skilltree; MIT licensed."
+      },
+      "selectionRationale": [
+        "Bundled framework example. Import your own library to replace it."
+      ]
+    },
+    {
+      "id": "privacy-checklist",
+      "name": "privacy-checklist",
+      "title": "Privacy check",
+      "description": "Inspect a proposed source release for credentials, private records, embedded metadata, and historical exposure.",
+      "category": "review",
+      "branch": "Release quality",
+      "scope": "work",
+      "version": "1.0.0",
+      "revision": "a327941f60b2",
+      "sha256": "a327941f60b28761b6c1a9677d3df348a8bf392301c390945f4cb2fb1cd5764e",
+      "entryFile": "SKILL.md",
+      "sourcePath": "examples/skills/privacy-checklist/SKILL.md",
+      "sourceType": "example",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "bytes": 1017,
+          "sha256": "a327941f60b28761b6c1a9677d3df348a8bf392301c390945f4cb2fb1cd5764e",
+          "mode": "644"
+        }
+      ],
+      "provenance": {
+        "kind": "fictional-example",
+        "evidence": "Original example written for Skilltree; MIT licensed."
+      },
+      "selectionRationale": [
+        "Bundled framework example. Import your own library to replace it."
+      ]
+    },
+    {
+      "id": "release-brief",
+      "name": "release-brief",
+      "title": "Release brief",
+      "description": "Turn verified product changes into a concise release announcement with a useful before-and-after example.",
+      "category": "content",
+      "branch": "Product stories",
+      "scope": "work",
+      "version": "1.0.0",
+      "revision": "032fa589b818",
+      "sha256": "032fa589b81803fb2ee698022ce2890c892f09192b40619bacdd9bed8086b02b",
+      "entryFile": "SKILL.md",
+      "sourcePath": "examples/skills/release-brief/SKILL.md",
+      "sourceType": "example",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "bytes": 986,
+          "sha256": "032fa589b81803fb2ee698022ce2890c892f09192b40619bacdd9bed8086b02b",
+          "mode": "644"
+        }
+      ],
+      "provenance": {
+        "kind": "fictional-example",
+        "evidence": "Original example written for Skilltree; MIT licensed."
+      },
+      "selectionRationale": [
+        "Bundled framework example. Import your own library to replace it."
+      ]
+    },
+    {
+      "id": "release-checklist",
+      "name": "release-checklist",
+      "title": "Release checklist",
+      "description": "Prepare a release-specific checklist covering the changed behavior, rollout, verification, and recovery path.",
+      "category": "operate",
+      "branch": "Planning",
+      "scope": "work",
+      "version": "1.0.0",
+      "revision": "9c9032498969",
+      "sha256": "9c90324989694501b3022058ef9dd1487b80936cffb355074fb283c09d2d5470",
+      "entryFile": "SKILL.md",
+      "sourcePath": "examples/skills/release-checklist/SKILL.md",
+      "sourceType": "example",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "bytes": 973,
+          "sha256": "9c90324989694501b3022058ef9dd1487b80936cffb355074fb283c09d2d5470",
+          "mode": "644"
+        }
+      ],
+      "provenance": {
+        "kind": "fictional-example",
+        "evidence": "Original example written for Skilltree; MIT licensed."
+      },
+      "selectionRationale": [
+        "Bundled framework example. Import your own library to replace it."
+      ]
     },
     {
       "id": "research-topic",
       "name": "research-topic",
       "title": "Research a topic",
-      "description": "Investigate a question using primary sources, record citations, and distinguish evidence from inference.",
+      "description": "Investigate a focused question with primary evidence, dated citations, and a clear separation of fact and inference.",
       "category": "research",
       "branch": "Investigation",
+      "scope": "work",
+      "version": "1.0.0",
+      "revision": "a66556ed5787",
+      "sha256": "a66556ed5787d4baa651d9d2766146886a27bacef44589fdcdee70ca8a1f7687",
+      "entryFile": "SKILL.md",
+      "sourcePath": "examples/skills/research-topic/SKILL.md",
+      "sourceType": "example",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "bytes": 967,
+          "sha256": "a66556ed5787d4baa651d9d2766146886a27bacef44589fdcdee70ca8a1f7687",
+          "mode": "644"
+        }
+      ],
+      "provenance": {
+        "kind": "fictional-example",
+        "evidence": "Original example written for Skilltree; MIT licensed."
+      },
+      "selectionRationale": [
+        "Bundled framework example. Import your own library to replace it."
+      ]
+    },
+    {
+      "id": "review-code",
+      "name": "review-code",
+      "title": "Review code",
+      "description": "Review a code change for concrete regressions, failure paths, and missing behavioral coverage.",
+      "category": "review",
+      "branch": "Code quality",
+      "scope": "work",
+      "version": "1.0.0",
+      "revision": "9618d2e8b3ac",
+      "sha256": "9618d2e8b3ac7f7ad9fad33eb863e8687ff90c4d147440b7406647b4f7033fe7",
+      "entryFile": "SKILL.md",
+      "sourcePath": "examples/skills/review-code/SKILL.md",
+      "sourceType": "example",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "bytes": 1027,
+          "sha256": "9618d2e8b3ac7f7ad9fad33eb863e8687ff90c4d147440b7406647b4f7033fe7",
+          "mode": "644"
+        }
+      ],
+      "provenance": {
+        "kind": "fictional-example",
+        "evidence": "Original example written for Skilltree; MIT licensed."
+      },
+      "selectionRationale": [
+        "Bundled framework example. Import your own library to replace it."
+      ]
+    },
+    {
+      "id": "social-caption",
+      "name": "social-caption",
+      "title": "Social caption",
+      "description": "Adapt supplied material into short social captions while preserving its claims, tone, and destination.",
+      "category": "content",
+      "branch": "Product stories",
+      "scope": "work",
+      "version": "1.0.0",
+      "revision": "a1958941b5cb",
+      "sha256": "a1958941b5cbc020f22cc8ddfc44ea6351e1071386760a702b28badcc1b929b3",
+      "entryFile": "SKILL.md",
+      "sourcePath": "examples/skills/social-caption/SKILL.md",
+      "sourceType": "example",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "bytes": 963,
+          "sha256": "a1958941b5cbc020f22cc8ddfc44ea6351e1071386760a702b28badcc1b929b3",
+          "mode": "644"
+        }
+      ],
+      "provenance": {
+        "kind": "fictional-example",
+        "evidence": "Original example written for Skilltree; MIT licensed."
+      },
+      "selectionRationale": [
+        "Bundled framework example. Import your own library to replace it."
+      ]
+    },
+    {
+      "id": "story-outline",
+      "name": "story-outline",
+      "title": "Story outline",
+      "description": "Organize a premise into a short story outline with a clear motive, conflict, and consequential ending.",
+      "category": "content",
+      "branch": "Writing",
       "scope": "personal",
       "version": "1.0.0",
-      "revision": "example",
-      "files": [],
-      "instructions": "# Research a topic\n\nDefine the question. Find primary evidence. Record sources and dates. Identify uncertainties and summarize only what the evidence supports."
+      "revision": "7a2dfff12a12",
+      "sha256": "7a2dfff12a1298e1ba01015ee86fc3f8061ea9725019cf20d76cd0ca8a6ddb86",
+      "entryFile": "SKILL.md",
+      "sourcePath": "examples/skills/story-outline/SKILL.md",
+      "sourceType": "example",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "bytes": 938,
+          "sha256": "7a2dfff12a1298e1ba01015ee86fc3f8061ea9725019cf20d76cd0ca8a6ddb86",
+          "mode": "644"
+        }
+      ],
+      "provenance": {
+        "kind": "fictional-example",
+        "evidence": "Original example written for Skilltree; MIT licensed."
+      },
+      "selectionRationale": [
+        "Bundled framework example. Import your own library to replace it."
+      ]
+    },
+    {
+      "id": "test-fixture",
+      "name": "test-fixture",
+      "title": "Test fixture",
+      "description": "Create small deterministic test data that exposes a specific behavior without using production records.",
+      "category": "build",
+      "branch": "Developer tools",
+      "scope": "work",
+      "version": "1.0.0",
+      "revision": "0d3ef31e94f3",
+      "sha256": "0d3ef31e94f38e2b20640540dc76091825c59ce03b5ba263429de8e9558b026c",
+      "entryFile": "SKILL.md",
+      "sourcePath": "examples/skills/test-fixture/SKILL.md",
+      "sourceType": "example",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "bytes": 950,
+          "sha256": "0d3ef31e94f38e2b20640540dc76091825c59ce03b5ba263429de8e9558b026c",
+          "mode": "644"
+        }
+      ],
+      "provenance": {
+        "kind": "fictional-example",
+        "evidence": "Original example written for Skilltree; MIT licensed."
+      },
+      "selectionRationale": [
+        "Bundled framework example. Import your own library to replace it."
+      ]
+    },
+    {
+      "id": "typed-endpoint",
+      "name": "typed-endpoint",
+      "title": "Typed endpoint",
+      "description": "Implement a small API endpoint with an explicit request contract, input validation, and predictable failures.",
+      "category": "build",
+      "branch": "Application code",
+      "scope": "work",
+      "version": "1.0.0",
+      "revision": "a904d5a7020d",
+      "sha256": "a904d5a7020d27cd88348aaeb3c4b137aafa045f784e88e1005c4b3df6ceb606",
+      "entryFile": "SKILL.md",
+      "sourcePath": "examples/skills/typed-endpoint/SKILL.md",
+      "sourceType": "example",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "bytes": 1045,
+          "sha256": "a904d5a7020d27cd88348aaeb3c4b137aafa045f784e88e1005c4b3df6ceb606",
+          "mode": "644"
+        }
+      ],
+      "provenance": {
+        "kind": "fictional-example",
+        "evidence": "Original example written for Skilltree; MIT licensed."
+      },
+      "selectionRationale": [
+        "Bundled framework example. Import your own library to replace it."
+      ]
+    },
+    {
+      "id": "weekly-plan",
+      "name": "weekly-plan",
+      "title": "Weekly plan",
+      "description": "Arrange supplied work into a realistic weekly plan using capacity, deadlines, and dependencies.",
+      "category": "operate",
+      "branch": "Planning",
+      "scope": "work",
+      "version": "1.0.0",
+      "revision": "80c8c538505e",
+      "sha256": "80c8c538505e42669053631a9daf5e500435e589edd4ec2f9e6110ebd6b6ffa0",
+      "entryFile": "SKILL.md",
+      "sourcePath": "examples/skills/weekly-plan/SKILL.md",
+      "sourceType": "example",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "bytes": 909,
+          "sha256": "80c8c538505e42669053631a9daf5e500435e589edd4ec2f9e6110ebd6b6ffa0",
+          "mode": "644"
+        }
+      ],
+      "provenance": {
+        "kind": "fictional-example",
+        "evidence": "Original example written for Skilltree; MIT licensed."
+      },
+      "selectionRationale": [
+        "Bundled framework example. Import your own library to replace it."
+      ]
     }
   ]
 }
