@@ -2,9 +2,9 @@
 
 Your skills, connected. Skilltree is a local-first website and MCP server that turns a collection of agent instructions into a navigable skill tree. Browse the library, ask Jev to choose a path, and hand the current instructions to an agent.
 
-![Skilltree interface mockup with 24 fictional example skills](docs/skilltree-preview.png)
+![Skilltree running with 24 fictional example skills](docs/skilltree-screenshot.png)
 
-_Illustrative interface mockup. All skills shown are fictional examples included in this repository. [Image generation prompt](docs/preview-prompt.md)._
+_Screenshot of the running app with the 24 fictional example skills included in this repository. Run `npm run demo` to explore it locally._
 
 Skilltree groups capabilities into core skills, branches, and specialized skills. These edges express subject relationships, not mandatory execution order. TypeSafe Jev makes a separate typed choice at each level. Every decision is visible in the activity screen, with probabilities and the selected path.
 

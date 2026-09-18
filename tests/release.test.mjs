@@ -63,7 +63,7 @@ test("release checks accept a clean framework commit", (t) => {
 
 test("reviewed preview media is accepted only while its bytes match the reviewed hash", (t) => {
   const { cwd, commit } = repository(t);
-  const file = "docs/skilltree-preview.png";
+  const file = "docs/skilltree-screenshot.png";
   fs.mkdirSync(path.join(cwd, "docs"));
   const bytes = fs.readFileSync(new URL(`../${file}`, import.meta.url));
   fs.writeFileSync(path.join(cwd, file), bytes);

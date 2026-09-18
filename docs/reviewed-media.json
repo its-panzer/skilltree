@@ -1,7 +1,10 @@
 {
   "docs/skilltree-preview.png": {
     "sha256": "2db8de4a22c30d541f2bbb7fe095f17f733afdaf67ef4d24ce26528b7c14bfc3",
-    "description": "Original interface mockup showing only fictional example skills. Visually reviewed before publication.",
-    "prompt": "docs/preview-prompt.md"
+    "description": "Previously reviewed generated mockup retained only in Git history; replaced with an actual app screenshot."
+  },
+  "docs/skilltree-screenshot.png": {
+    "sha256": "0eeaacfe15c940b17d8163eab3a1063b1f9fac0dbd6cf6e5f53a5ddeb7f9ffd2",
+    "description": "Actual screenshot of the running app in isolated demo mode with 24 fictional example skills. No private library, activity, paths, or credentials."
   }
 }
